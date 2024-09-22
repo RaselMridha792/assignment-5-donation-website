@@ -1,5 +1,5 @@
 // where we include these function who apply in multiple place by called his name  
-function donationAmountInput(id){
+function getInputFromUser(id){
         const donationAmount = document.getElementById(id).value;
         if(!isNaN(donationAmount)){
             alert('congratulation its a number');
@@ -12,7 +12,7 @@ function donationAmountInput(id){
         }
 }
 
-function donationIncrementAmount(id){
+function getInputFromDiv(id){
     const incrementAmount = document.getElementById(id).innerText;
     const incrementAmountNumber = parseFloat(incrementAmount);
     return incrementAmountNumber;

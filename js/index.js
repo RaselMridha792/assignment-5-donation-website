@@ -2,13 +2,17 @@ document.getElementById('donate-amount-btn').addEventListener('click', function(
     event.preventDefault();
     console.log('donate button clicked');
     // get inputs and innertext by calling function 
-    const donatedInput = donationAmountInput('donation-amount');
-    const totalFunds = donationIncrementAmount('increment-amount');
+    const donatedInput = getInputFromUser('donation-amount');
+    const totalFunds = getInputFromDiv('increment-amount');
     if(donatedInput > 0){
         const newFunds = totalFunds + donatedInput;
         document.getElementById('increment-amount').innerText = newFunds;
 
-        // drease the acount balance 
+        // dcrease the acount balance 
+
+        const accountBalance = getInputFromDiv('available-balance');
+        const availableBalance = accountBalance - donatedInput;
+        document.getElementById('available-balance').innerText = availableBalance;
     }
     else{
         alert('sorry! you negative number can not be donated');
