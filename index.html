@@ -44,8 +44,8 @@
             </div>
         </nav>
         <div class="flex items-center justify-center gap-8 pt-10 md:pt-16">
-            <button class="btn primary-btn hover:bg-white">Donation</button>
-            <button class="btn bg-white text-lg hover:bg-[#B4F461] border border-neutral-300">History</button>
+            <button class="btn primary-btn hover:bg-white active:bg-white">Donation</button>
+            <button class="btn bg-white text-lg hover:bg-[#B4F461] active:bg-[#B4F461] border border-neutral-300">History</button>
         </div>
     </header>
     <main class="max-w-screen-xl mx-auto mt-5">
@@ -59,16 +59,16 @@
                   <div>
                     <div class="btn">
                         <img src="./images/coin.png" alt="">
-                        <div><span id="increment-amount">0</span>BDT</div>
+                        <div><span id="increment-amount">330</span>BDT</div>
                     </div>
                     <h1 class="font-bold pt-4 text-2xl">Donate for Flood Relief in Noakhali, Bangladesh</h1>
                     <p class="py-6 text-gray-500 text-sm">
                         The floods in Noakhali have torn through homes and left the infrastructure crumbling. People stand where their lives used to be, watching as the water rises again, knowing there's little left to lose. Your donation might be a lifeline, a meal, or maybe just the smallest moment of relief in an ongoing struggle. Every contribution shifts something, however imperceptible. Join us, not to fix things entirely, but to make the weight of this disaster just a little less heavy for those living through it.
                     </p>
                     <div class="mb-5">
-                        <input type="text" placeholder="Write Donation Amount" class="input input-bordered w-full" />
+                        <input id="donation-amount" type="text" placeholder="Write Donation Amount" class="input input-bordered w-full" />
                     </div>
-                    <button class="btn primary-btn hover:bg-white w-full">Donate Amount</button>
+                    <button id="donate-amount-btn" class="btn primary-btn hover:bg-white w-full">Donate Amount</button>
                   </div>
                 </div>
               </div>
@@ -124,7 +124,7 @@
 
     </footer>
 
-
+    <script src="./js/multi-functions.js"></script>
     <script src="./js/index.js"></script>
 </body>
 
