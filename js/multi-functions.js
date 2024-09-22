@@ -2,13 +2,12 @@
 function getInputFromUser(id){
         const donationAmount = document.getElementById(id).value;
         if(!isNaN(donationAmount)){
-            alert('congratulation its a number');
             const donationAmountNumber = parseFloat(donationAmount);
             return donationAmountNumber;
         }
         else{
             alert('sorry! your entry is not a number. please enter the amount do you want to donate');
-            return 0;
+            return null;
         }
 }
 
