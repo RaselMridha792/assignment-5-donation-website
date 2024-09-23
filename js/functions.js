@@ -34,6 +34,6 @@ function operationInputData(DonatedAmount, incrementAmount, availableBalance, my
         return;
     }
     else{
-        alert('sorry! negative number. please enter the right amount for the donation.');
+        alert('sorry! Invalid Number. please enter the right amount for the donation.');
     }
 }
