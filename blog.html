@@ -29,13 +29,13 @@
 <body class="lexend text-xl">
     <header>
         <nav class="bg-orange-50 pt-4">
-            <div class="navbar  max-w-screen-xl mx-auto md:pb-14">
+            <div class="navbar  max-w-screen-xl mx-auto md:pb-14 px-8 md:px-5 lg:px-2">
                 <div class="navbar-start">
-                    <button class="btn primary-btn hover:bg-white">Blog</button>
+                    <button id="home-page" class="btn primary-btn hover:bg-white">Home</button>
                 </div>
                 <div class="navbar-center flex gap-4">
                     <img src="./images/logo.png" alt="">
-                    <a class="font-semibold">Donate Bangladesh</a>
+                    <a class="font-semibold hidden md:flex">Donate Bangladesh</a>
                 </div>
                 <div class="navbar-end gap-2 text-gray-600 font-semibold">
                     <img src="./images/coin.png" alt="">
@@ -45,47 +45,72 @@
             </div>
         </nav>
     </header>
-    <main class="max-w-screen-xl mx-auto">
+    <main class="max-w-screen-xl mx-auto md:pb-14 px-8 md:px-5 lg:px-0">
         <!-- card section start here  -->
-         <div class="my-10 flex items-center">
+        <div class="my-10 flex items-center">
             <h1 class="text-4xl ">Important FAQ</h1>
             <img class="w-16" src="./images/faq.gif" alt="">
-         </div>
+        </div>
         <section class="bg-base-100 border rounded-lg shadow-sm">
             <div class="collapse collapse-arrow bg-whitem-10">
                 <input type="radio" name="my-accordion-2" />
-                <div class="collapse-title text-xl font-medium">Click to open this one and close others</div>
+                <div class="collapse-title text-xl font-medium">What is the Document Object Model?</div>
                 <div class="collapse-content">
-                    <p>hello</p>
+                    <p class="text-gray-500">It's essentially the interface between your JavaScript code and the webpage, making it possible to create dynamic and interactive experiences.</p>
                 </div>
             </div>
             <div class="divider"></div>
             <div class="collapse collapse-arrow bg-whitem-10">
                 <input type="radio" name="my-accordion-2" />
-                <div class="collapse-title text-xl font-medium">Click to open this one and close others</div>
-                <div class="collapse-content">
-                    <p>hello</p>
+                <div class="collapse-title text-xl font-medium">how to select an element from the dom?</div>
+                <div class="collapse-content text-gray-500">
+                    <ol>
+                        <li>1. getElementById-- Selects an element by its unique ID.</li>
+                        <li>2. getElementByClassName-- Selects an element by its ClassName.</li>
+                        <li>3. getElementsByTagName---
+                            Selects elements by their tag name. This also returns a live HTMLCollection.</li>
+                        <li>4. querySelector---
+                            Selects the first element that matches a CSS selector. This method is very versatile.</li>
+                        <li>5. querySelectorAll---
+                            Selects all elements that match a CSS selector and returns a static NodeList.</li>
+                    </ol>
                 </div>
             </div>
             <div class="divider"></div>
             <div class="collapse collapse-arrow bg-whitem-10">
                 <input type="radio" name="my-accordion-2" />
-                <div class="collapse-title text-xl font-medium">Click to open this one and close others</div>
-                <div class="collapse-content">
-                    <p>hello</p>
+                <div class="collapse-title text-xl font-medium">what is event delegation in the context of the dom, and why is it usefull?</div>
+                <div class="collapse-content text-gray-500">
+                    <p>Event delegation is a technique in the context of the DOM where I attach a single event listener to a parent element instead of adding individual listeners to multiple child elements. This allows me to manage events more efficiently.</p>
                 </div>
             </div>
             <div class="divider"></div>
             <div class="collapse collapse-arrow bg-whitem-10">
                 <input type="radio" name="my-accordion-2" />
-                <div class="collapse-title text-xl font-medium">Click to open this one and close others</div>
-                <div class="collapse-content">
-                    <p>hello</p>
+                <div class="collapse-title text-xl font-medium">how do yu manipulate an element's attributes and styles using the dom?</div>
+                <div class="collapse-content text-gray-500">
+                    <p>I can manipulate an element's attributes and styles using the DOM with JavaScript. Here’s how to do it:</p>
+                    <ul>
+                        <li>1, Getting an Attribute Use getAttribute() to retrieve the value of an attribute.</li>
+                        <li>2, Setting an Attribute Use setAttribute() to change or add an attribute.</li>
+                        <li>3, Removing an Attribute Use removeAttribute() to remove an attribute.</li>
+                        <li>4, Changing Styles Directly You can change the style of an element using the style property.</li>
+                        <li>5, Setting Multiple Styles You can also set multiple styles using a loop or by directly assigning a string.</li>
+                        <li>6, Adding and Removing Classes Use the classList property to manipulate classes easily.</li>
+                    </ul>
                 </div>
             </div>
-            </section>
+        </section>
     </main>
+    <script src="./js/multi-functions.js"></script>
+    <script src="./js/functions.js"></script>
     <script src="./js/index.js"></script>
+    <script>
+        // for going to homepage 
+        document.getElementById('home-page').addEventListener('click', function () {
+            window.location.href = 'index.html'
+        })
+    </script>
 </body>
 
 </html>

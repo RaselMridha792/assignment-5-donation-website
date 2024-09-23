@@ -28,11 +28,11 @@ function buttonAction(id){
 
 
 
-function donationHistory(id, date) {
+function donationHistory(id, date, places) {
     const historyOfDonation = document.createElement('div'); // Use 'div' as a valid HTML element
     historyOfDonation.innerHTML = `
 <div class="border rounded-xl shadow-lg p-8 my-10">
-    <h1 class="font-bold text-2xl mb-2">${id} Taka is Donated for famine-2024 at Feni, Bangladesh</h1>
+    <h1 class="font-bold text-2xl mb-2">${id} ${places}</h1>
     <p class="text-gray-500 font-normal text-lg">Date : ${date}</p>
 </div>
 `;
